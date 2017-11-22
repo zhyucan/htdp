@@ -1,0 +1,11 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname |1131|) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+;; random-n-m : integer integer -> integer
+;; return a number in [n, m)
+
+(define (random-n-m n m)
+  (+ (ranodm (- m n) n)))
+
+(random-n-m 2 8) ;; 2 + 0 ~ 5
+(random-n-m 5 20) ;; 5 + 0 ~ 15
